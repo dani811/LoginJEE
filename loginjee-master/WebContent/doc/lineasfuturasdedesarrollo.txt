@@ -1,0 +1,11 @@
+#MEJORAS DE LA APLICACIÓN FUTURAS
+
+Con fecha 13 de agosto dejamos de evolucionar la app, registrando las posibles mejoras que son:
+
+1.- Identificar la sesión del usuario con su nombre
+2.- Mejorar la apariencia (CSS, estilos, maquetación y tal)
+3.- Mejorar la documentación del código
+4.- Usar el mapa en la funcionalidad de buscar
+5.- Dar de baja y modificar usuarios
+6.- Añadir el sexo al usuario y el telefono y una imagen de perfil
+7.- Hacer un informe con un JSP detallado de las sesiones y sus actividades

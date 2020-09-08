@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="menu.js"></script>
+<link rel="stylesheet" type="text/css" href="estilos.css"/>
+<title>MENÚ</title>
+</head>
+<body>
+<!-- VAMOS A MODIFICAR LA FUNCIONALIDAD DE MOSTRAR USUARIOS JSON
+PARA QUE SÓLO NOS MUESTRE EL NOMBRE. UNA VEZ CONSEGUIDO ESTO, 
+CUANDO YO LE DE A UN NOMBRE, ME TIENE QUE APARECER EL DETALLE
+NOMBRE-ID-CONTRASEÑA EN EL MARGEN DERECHO, REALIZANDO PARA ELLO
+UNA LLAMADA AL SERVIDOR -->
+	<!--  <a href="/loginjee/ListarUsuariosJSON">LISTAR USUARIOS JSON</a>
+	<a href="/loginjee/ListarUsuariosJSP">LISTAR USUARIOS jsp</a>-->
+	<a href="/loginjee/CerrarSesion">Cerrar session</a>
+	<ul>
+		<li onclick="listarUsuariosServidor()">Listar usuarios JSON</li>
+		<li><a href="/loginjee/ListarUsuariosJSP">Listar usarios JSP</a></li>
+		<li><a href="busqueda.html">Buscar usuarios</a></li>
+	</ul>
+	<!-- punto de anclaje o hook -->
+	<div id="divusuuarios">
+	</div>
+	<div id="detalleusuario">
+	</div>
+</body>
+</html>

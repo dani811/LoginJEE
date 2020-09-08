@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+onload = cuentaveces;
+
+function obtenerVecesYActualizaSesion ()
+{
+	let snveces = sessionStorage.getItem('nveces');
+	let nveces;
+	if (snveces == null)
+		{
+		nveces=0;
+		}
+	else
+		{
+		nveces = parseInt(snveces);
+		}
+	let siguiente = nveces+1;
+	sessionStorage.setItem('nveces',siguiente);
+
+	return nveces;
+}
+//¿cUÁNTO DURA "VIVA" UNA VARIABLE EN UN ENTORNO WEB --> ÁMBITO
+//... SESSIONSTORAGE --> ÁMBITO DE SESIÓN
+//... LOCALSTORAGE --> ÁMBITO LOCAL (GLOBAL)
+
+function obtenerVecesYActualizaTotal ()
+{
+	let snveces = localStorage.getItem('nveces');
+	let nveces;
+	if (snveces == null)
+		{
+		nveces=0;
+		}
+	else
+		{
+		nveces = parseInt(snveces);
+		}
+	let siguiente = nveces+1;
+	localStorage.setItem('nveces',siguiente);
+
+	return nveces;
+}
+
+function mostrarNeveces (nsesion, ntotal)
+{
+	document.getElementById ("cuerpo").innerHTML = "TOTAL VECES = " + ntotal + " TOTAL SESION = "+ nsesion;
+}
+
+function cuentaveces () {
+	
+	let nsesion = obtenerVecesYActualizaSesion();
+	let ntotal = obtenerVecesYActualizaTotal();
+	console.log ("Nveces total = " + ntotal);
+	console.log ("Nveces sesion = " + nsesion);
+	
+	mostrarNeveces (nsesion, ntotal);
+}
+
+</script>
+<title>Insert title here</title>
+</head>
+<body id="cuerpo">
+
+</body>
+</html>
